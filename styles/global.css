@@ -21,11 +21,10 @@
     --stroke-color:#27272A;
     --text-color-primary:#F4F4F4;
     --text-color-secondary:#A1A1AA;
-    --brand-gradient:#FC4B1A;
 
     --ff-sans: 'Inter', system-ui, sans-serif;
     --fw-base: 400;
-    --fw-md-md: 500;
+    --fw-md: 500;
     --fw-bold: 800;
 
     --fs-sm: 0.875rem;
