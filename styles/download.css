@@ -7,12 +7,26 @@
       position: absolute;
       bottom: 0;
       right: -3.5rem;
+      overflow: hidden;
     }
   }
 
   .buttons {
     flex-wrap: wrap;
     margin-top: 2rem;
+  }
+
+  @media (width <= 520px) {
+    .card {
+      padding: 4rem 2rem 10rem;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      & > img {
+        display: none;
+      }
+    }
   }
 
   @media (width >= 768px) {
@@ -23,7 +37,8 @@
       grid-template-columns: 1fr;
 
       & > img {
-        width: 18rem;
+        right: 0;
+        width: 14rem;
       }
     }
   }
