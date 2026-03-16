@@ -10,17 +10,18 @@
   justify-content: center;
   width: fit-content;
 
-  border-radius:  .5rem;
+  border-radius: .5rem;
   font: var(--fw-md) var(--fs-base)/1.5rem var(--ff-sans);
 
   cursor: pointer;
+  transition: all 0.3s ease;
 
   background: var(--btn-bg-color);
   color: var(--btn-color);
-
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
   --btn-bg-color: linear-gradient(90deg,
   var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
   --btn-color: var(--surface-color);
@@ -30,21 +31,26 @@
   color: var(--btn-color);
 }
 
+.btn:active {
+  transform: scale(0.98);
+}
+
 .btn-sm {
   padding: .5rem 1rem;
   font-size: var(--fs-sm);
 }
+
 .btn-md {
   padding: .75rem 1.5rem;
   font-size: var(--fs-base);
 }
+
 .btn-lg {
   padding: 1rem 2rem;
   font-size: 1.125rem;
 }
 
 .btn[aria-label] {
-
   position: relative;
 
   &::before {
@@ -66,15 +72,29 @@
   }
 }
 
-@media (width >= 80em) {
+@media (width >= 768px) {
+  .btn {
+    border-radius: .75rem;
+  }
 
+  .btn-sm {
+    padding: .65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-md {
+    padding: .85rem 1.75rem;
+  }
+}
+
+@media (width >= 1280px) {
   .btn-sm {
     padding: .75rem 1.5rem;
     font-size: var(--fs-base);
   }
+
   .btn-md {
     padding: 1rem 2rem;
     font-size: 1.125rem;
   }
-
 }

@@ -1,5 +1,21 @@
 header {
-    & a:first-child {
-        margin-right: auto;
+  position: relative;
+  z-index: 100;
+
+  & a:first-child {
+    margin-right: auto;
+  }
+
+  & nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  @media (width >= 768px) {
+    & nav {
+      flex-wrap: nowrap;
+      gap: 1.5rem;
     }
+  }
 }

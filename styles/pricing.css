@@ -94,7 +94,30 @@
     }
   }
 
-  @media (width >=80em) {
+  @media (width >= 768px) {
+    & .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    & h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (width >= 1024px) {
+    & .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & .premium .card {
+      padding-bottom: 4rem;
+    }
+  }
+
+  @media (width >= 1280px) {
     --fs-price: 2.5rem;
 
     & header {
@@ -112,7 +135,7 @@
     }
 
     & .card:nth-child(3) .separator {
-      margin-block: 1.5rem ;
+      margin-block: 1.5rem;
     }
   }
 }

@@ -23,7 +23,13 @@ section {
   }
 }
 
-@media (width >= 80em) {
+@media (width >= 768px) {
+  #smartphones-img {
+    margin-top: 6rem;
+  }
+}
+
+@media (width >= 1280px) {
   #smartphones-img {
     display: none;
   }

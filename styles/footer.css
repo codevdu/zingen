@@ -42,7 +42,36 @@ footer {
     }
   }
 
-  @media (width >= 80em) {
+  @media (width >= 768px) {
+    & .container {
+      padding-inline: 2rem;
+      gap: 2rem;
+    }
+
+    & nav.even-columns {
+      gap: 3rem;
+    }
+  }
+
+  @media (width >= 1024px) {
+    & .container {
+      padding-inline: 1.5rem;
+    }
+
+    & .top {
+      grid-template-columns: auto 1fr;
+
+      & nav {
+        margin-left: auto;
+
+        & ul {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  @media (width >= 1280px) {
     .container {
       padding-inline: 0;
       padding-bottom: 2rem;
@@ -58,7 +87,6 @@ footer {
           width: 14rem;
         }
       }
-
     }
   }
 
